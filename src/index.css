@@ -39,3 +39,9 @@ code {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 }
+.pushDownBig{
+  margin-top: 16%;
+}
+.center{
+  text-align: center;
+}
