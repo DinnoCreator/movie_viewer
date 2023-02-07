@@ -45,7 +45,7 @@ const Home = () => {
 
   return (
     <>
-      <div className="container">
+      <div className="container mt-5">
       <div className="container" style={{textAlign: "center"}}>
         <h1>{error}</h1>
         <h1>{timer} sec</h1>
