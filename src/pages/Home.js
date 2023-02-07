@@ -16,7 +16,7 @@ const Home = () => {
 
   const getQrcode = useCallback(async () => {
     try {
-      await fetch(`http://localhost:3333/qrcode`, {
+      await fetch(`https://movie-viewer-api.onrender.com/qrcode`, {
         method: "GET",
         headers: { "Content-Type": "application/json" },
       })
