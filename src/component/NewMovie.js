@@ -17,7 +17,7 @@ const NewMovie = () => {
     try {
       setLoading(true);
       //api call for sending the user data to the backend
-      await axios.post('https://movie-viewer-api.onrender.com/feed', {title, image})
+      await axios.post('https://nest-api-vxd3.onrender.com/feed', {title, image})
           .then(function (response) {
             
           })

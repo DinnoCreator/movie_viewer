@@ -16,7 +16,7 @@ const Home = () => {
 
   const getQrcode = useCallback(async () => {
     try {
-      await fetch(`https://movie-viewer-api.onrender.com/qrcode`, {
+      await fetch(`https://nest-api-vxd3.onrender.com/qrcode`, {
         method: "GET",
         headers: { "Content-Type": "application/json" },
       })

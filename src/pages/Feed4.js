@@ -15,7 +15,7 @@ const Feed4 = () => {
         //   .then(function (jsonData) {
         //     setMovies(jsonData);
         //   });
-        await axios.get('https://movie-viewer-api.onrender.com/feed')
+        await axios.get('https://nest-api-vxd3.onrender.com/feed')
           .then(function (response) {
             setMovies(response.data);
           })
