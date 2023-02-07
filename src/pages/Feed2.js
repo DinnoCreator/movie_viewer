@@ -15,7 +15,7 @@ const Feed2 = () => {
         //   .then(function (jsonData) {
         //     setMovies(jsonData);
         //   });
-        await axios.get('https://movefeed-api.onrender.com/feed')
+        await axios.get('https://movie-viewer-api.onrender.com/feed')
           .then(function (response) {
             setMovies(response.data);
           })
