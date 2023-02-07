@@ -20,6 +20,7 @@ const Feed1 = () => {
         await axios.get('https://nest-api-vxd3.onrender.com/feed')
           .then(function (response) {
             setMovies(response.data);
+            setLoading(false);
           })
       } catch (err) {
         console.error(err.message);
