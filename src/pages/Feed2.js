@@ -2,8 +2,10 @@ import axios from "axios";
 import { useState, useCallback, useEffect } from "react";
 const Feed2 = () => {
     const [movies, setMovies] = useState([]);
+    const [loading, setLoading] = useState(false);
   
     const getMovies = useCallback(async () => {
+      setLoading(true);
       try {
         // await fetch(`http://localhost:3333/feed`, {
         //   method: "GET",
@@ -18,6 +20,7 @@ const Feed2 = () => {
         await axios.get('https://nest-api-vxd3.onrender.com/feed')
           .then(function (response) {
             setMovies(response.data);
+            setLoading(false);
           })
       } catch (err) {
         console.error(err.message);
@@ -27,6 +30,7 @@ const Feed2 = () => {
     useEffect(() => {
         getMovies();
     }, [getMovies]);
+
 
     const movieShow =  movies.map((movie) => {
          return (<>
@@ -46,17 +50,29 @@ const Feed2 = () => {
             </div>
           </>)
         });
-    
+    if (loading) {
+    // Result when images are loading 
+    return (
+      <div className="center">
+        <div></div>
+        <div
+          style={{ display: "inline-block" }}
+          className="loaderBig pushDownBig"
+        ></div>
+      </div>
+    );
+  } else {
     return (
         <>
           <div className="container">
           <div className="row container" style={{textAlign: "center"}}>
-            <h2 className="mt-3">Random Movies page 2</h2>
+            <h2 className="mt-3">Random Movies page 1</h2>
           {movieShow}
           </div>
           </div>
         </>
     );
+ }
 }
 
 export default Feed2;
