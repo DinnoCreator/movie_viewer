@@ -2,8 +2,10 @@ import axios from "axios";
 import { useState, useCallback, useEffect } from "react";
 const Feed1 = () => {
     const [movies, setMovies] = useState([]);
+    const [loading, setLoading] = useState(false);
   
     const getMovies = useCallback(async () => {
+      setLoading(true);
       try {
         // await fetch(`http://localhost:3333/feed`, {
         //   method: "GET",
@@ -46,7 +48,18 @@ const Feed1 = () => {
             </div>
           </>)
         });
-    
+    if (loading) {
+    // Result when images are loading 
+    return (
+      <div className="center">
+        <div></div>
+        <div
+          style={{ display: "inline-block" }}
+          className="loaderBig pushDownBig"
+        ></div>
+      </div>
+    );
+  } else {
     return (
         <>
           <div className="container">
@@ -57,6 +70,7 @@ const Feed1 = () => {
           </div>
         </>
     );
+ }
 }
 
 export default Feed1;
