@@ -1,6 +1,7 @@
 import classes from "../component/NewMovie.module.css";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
 
 const NewMovie = () => {
   // form data
@@ -16,17 +17,10 @@ const NewMovie = () => {
     try {
       setLoading(true);
       //api call for sending the user data to the backend
-      await fetch(`https://movie-viewer-api.onrender.com/feed`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          title,
-          image,
-        }),
-      }).then((res) => {
-        res.json();
-        return navigate("/");
-      })
+      await axios.post('https://movie-viewer-api.onrender.com/feed', {title, image})
+          .then(function (response) {
+            
+          })
     } catch (error) {
       console.error(error);
     }
