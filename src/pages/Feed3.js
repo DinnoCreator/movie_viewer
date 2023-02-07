@@ -66,7 +66,7 @@ const Feed3 = () => {
         <>
           <div className="container">
           <div className="row container" style={{textAlign: "center"}}>
-            <h2 className="mt-3">Random Movies page 1</h2>
+            <h2 className="mt-3">Random Movies page 3</h2>
           {movieShow}
           </div>
           </div>
