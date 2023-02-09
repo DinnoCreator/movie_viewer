@@ -47,7 +47,7 @@ const Home = () => {
   }, [getQrcode]);
 
   const show = () => {
-    if (loading)
+    if (loading) {
       return (
       <>
         <div className="center">
@@ -58,11 +58,12 @@ const Home = () => {
         ></div>
       </div>
       </>
-    );
-
+    );}
+   else {
      return (
         <img src={qrcode} alt="qr" />
        );
+}
 }
   return (
     <>
