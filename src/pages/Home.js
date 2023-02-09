@@ -70,7 +70,7 @@ const Home = () => {
       <div className="container mt-5">
       <div className="container" style={{textAlign: "center"}}>
         <h1>{error}</h1>
-        <h3>If the loader persists longer than 10 seconds which it might, please bear with us we're using a free server hosting so it sleeps ans might take some time to run</h3>
+        <h3>If the loader persists longer than 10 seconds which it might, please bear with us we're using a free server hosting so it sleeps and it might take some time to run</h3>
         <h1>{timer} sec</h1>
         {show()}
       </div>
